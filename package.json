@@ -1,6 +1,10 @@
 {
   "name": "db",
   "module": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./runner": "./runner.ts"
+  },
   "type": "module",
   "private": true,
   "devDependencies": {
