@@ -1,0 +1,1 @@
+ALTER TABLE paths ALTER COLUMN document_id DROP NOT NULL;
