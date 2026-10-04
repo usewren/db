@@ -5,3 +5,7 @@ CREATE TABLE IF NOT EXISTS common.request_stats (
   writes  BIGINT NOT NULL DEFAULT 0,
   PRIMARY KEY (org_id, date)
 );
+
+INSERT INTO common.schema_versions (version, description)
+VALUES (8, 'Request stats')
+ON CONFLICT (version) DO NOTHING;
