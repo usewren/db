@@ -5,3 +5,7 @@ CREATE TABLE IF NOT EXISTS common.org_slugs (
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 CREATE UNIQUE INDEX IF NOT EXISTS org_slugs_slug ON common.org_slugs (slug);
+
+INSERT INTO common.schema_versions (version, description)
+VALUES (7, 'Org slugs')
+ON CONFLICT (version) DO NOTHING;
